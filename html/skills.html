@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Skills Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/navigation-bar.css">
+    <link rel="stylesheet" type="text/css" href="../css/page3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body id="SKILLS-PAGE">
+    <div id="nav-bar">
+        <a href="index.html" id=nav-home>Home</a>
+		<a href="education.html" id=nav-education>Education</a>
+		<a href="skills.html" id=nav-skills><u>skills</u></a>
+		<a href="gallery.html" id=nav-gallery>Gallery</a>
+		<a href="contact.html" id=nav-contact>Contact</a>  
+    </div>
+    <div class="content">
+        <h1>Fill in what you feel my skills are</h1>
+        <form name="Form-Skills" method="POST" onsubmit="return validateForm()">
+            <label for="inputName" id="input-label">Name</label>
+            <input type="text" id="input-text" class="form-control" id="Name" name="Name" placeholder="Name">
+            <br>
+            <label for="inputSkill" id="input-label">Skills  </label>
+            <input type="text" id="input-text" class="form-control" id="skill" name="skill" placeholder="Skill name">
+            <br>
+            <label for="level" id="input-label">Level</label>
+            <br>
+            <select id="level_list">
+                <option selected="true" value="Noob">Noob</option>
+                <option value="Noob">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Novice">Proficient</option>
+            </select>
+            <br>
+            <br>
+        <button class="btn btn-success btn-lg" type="submit" id="newE">Submit</button>
+        </form>
+    </div>
+    <div class="content2">
+        <h2>Here are the results</h2>
+        <table class="MyTable">
+            <thead>
+                <tr>
+                    <th >Name</th>
+                    <th >Skill</th>
+                    <th>level</th>
+                </tr>
+            </thead>
+            <tbody id="InsertHere"> </tbody>
+        </table>
+        <h3>Remove a row using the name</h3>
+        <form name="Name-Form" method="POST" onsubmit="return checkForm()">
+            <label for="inputName" id="input-label">Name</label>
+            <input type="text" id="input-text" class="form-control" id="Name" name="Name" placeholder="Name">
+        <button class="btn btn-warning " type="submit" id="newE">Proceed</button>
+        </form>
+    </div>
+    <div class="footer">
+        Copyright &copy; Aditya Malhotra 2021
+        <br>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/main-form.js"></script>
+</body> 
+</html> 
